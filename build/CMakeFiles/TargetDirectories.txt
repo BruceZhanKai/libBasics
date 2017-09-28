@@ -1,0 +1,3 @@
+/home/bruce/Desktop/gitLab/libBasics/build/CMakeFiles/edit_cache.dir
+/home/bruce/Desktop/gitLab/libBasics/build/CMakeFiles/rebuild_cache.dir
+/home/bruce/Desktop/gitLab/libBasics/build/CMakeFiles/libBasics.dir
