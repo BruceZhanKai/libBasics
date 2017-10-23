@@ -29,6 +29,7 @@ link_directories(/usr/lib)
 
 LINK_DIRECTORIES(${CMAKE_BINARY_DIR})
 
+#add_library( ${PROJECT_NAME} STATIC SHARED ${LIB_FILES} )
 add_library( ${PROJECT_NAME} SHARED ${LIB_FILES} )
 #add_executable( ${PROJECT_NAME} ${LIB_FILES})
 

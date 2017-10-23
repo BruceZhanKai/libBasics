@@ -23,7 +23,7 @@ namespace BZ
 
     std::string GetAbsolutePath(char* argv)
     {
-        std::cout<<"argv="<<argv<<std::endl;
+        //std::cout<<"argv="<<argv<<std::endl;
         std::string project(argv), projectname;
         std::stringstream liness_project(project);
         std::getline(liness_project, projectname, '/');
@@ -31,7 +31,7 @@ namespace BZ
 
         char* basePath = realpath(argv,NULL);
         std::string fullpath(basePath), singlepath, finalpath;
-        std::cout<<"fullpath="<<fullpath<<std::endl;
+        //std::cout<<"fullpath="<<fullpath<<std::endl;
         delete[] basePath;
         basePath = 0;
         delete[] basePath;
@@ -44,13 +44,13 @@ namespace BZ
                 finalpath=finalpath+singlepath+"/";
         }
 
-        std::cout<<"projectname="<<projectname<<std::endl;
-        std::cout<<"finalpath="<<finalpath<<std::endl;
+        //std::cout<<"projectname="<<projectname<<std::endl;
+        //std::cout<<"AbsolutePath="<<finalpath<<std::endl;
         return finalpath;
     }
 
 
-    std::vector<std::string> GetFolderWholePath(std::string FolderPath)
+    std::vector<std::string> GetAllNameInFolder(std::string FolderPath)
     {
         std::vector<std::string> WholePath;
         DIR * dir;
@@ -113,6 +113,9 @@ namespace BZ
         }
         return time_str;
     };
+
+
+
 
 
     /***************************************************************************/
