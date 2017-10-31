@@ -28,22 +28,16 @@ namespace BZ
         std::stringstream liness_project(project);
         std::getline(liness_project, projectname, '/');
         std::getline(liness_project, projectname);
-
         char* basePath = realpath(argv,NULL);
         std::string fullpath(basePath), singlepath, finalpath;
-        //std::cout<<"fullpath="<<fullpath<<std::endl;
+       //std::cout<<"fullpath="<<fullpath<<std::endl;
         delete[] basePath;
-        basePath = 0;
-        delete[] basePath;
-
         std::stringstream liness_fullpath(fullpath);
-
         while(std::getline(liness_fullpath, singlepath, '/'))
         {
             if(singlepath!=projectname)
                 finalpath=finalpath+singlepath+"/";
         }
-
         //std::cout<<"projectname="<<projectname<<std::endl;
         //std::cout<<"AbsolutePath="<<finalpath<<std::endl;
         return finalpath;
